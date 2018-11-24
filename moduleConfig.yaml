@@ -1,31 +1,21 @@
-# Simple mapping configuraton used to auto generate export
-#
+# Simple mapping configuraton used to auto generate exported modules
 
 ramda:
   module_name: r
 rxjs:
-    rx
-
-
-
--
-  filename: r
-  pkg_name: ramda
--
-  filename: rxjs
-  pkg_name: rx
--
-  filename: chance
-  pkg_name: chance
--
-  filename: math
-  pkg_name: mathjs
--
-  filename: yaml
-  pkg_name: yaml
--
-  filename: esm
-  pkg_name: esm
--
-  filename: jsf
-  pkg_name: json-schema-faker
+  module_name: rx
+  namespaces:
+    - testing
+    - operators
+    - websocket
+    - ajax
+chance:
+  module_name: chance
+mathjs:
+  module_name: math
+yaml:
+  module_name: yaml
+esm:
+  module_name: esm
+json-schema-faker:
+  module_name: jsf

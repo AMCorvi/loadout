@@ -4,11 +4,7 @@ ramda:
   module_name: r
 rxjs:
   module_name: rx
-  namespaces:
-    - testing
-    - operators
-    - websocket
-    - ajax
+  namespaces: [ testing, operators, websockets, ajax ]
 chance:
   module_name: chance
 mathjs:

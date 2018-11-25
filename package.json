@@ -7,7 +7,10 @@
     "node": ">=6.4.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "node lib/clean_submodules.js",
+    "create": "node lib/create_submodules.js",
+    "setup": "run-s clean create update",
+    "update": "node lib/update_index_file.js"
   },
   "author": "AMCorvi <am@corvi.xyz>",
   "license": "MIT",
@@ -22,7 +25,6 @@
     "yaml": "1.0.2"
   },
   "devDependencies": {
-    "eslint": "5.9.0",
-    "eslint-plugin-react": "7.11.1"
+    "npm-run-all": "4.1.5"
   }
 }

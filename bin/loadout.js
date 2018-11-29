@@ -15,7 +15,7 @@ const {
 const packageJSON = require('../package.json')
 
 program.command(
-  'spread [pkg...]',
+  'spread <pkg...>',
   'which utilities we addin',
   command => {
     command.option('a', {
@@ -26,18 +26,22 @@ program.command(
     command.positional('pkg', {
       description: 'array of utility names'
       ,choices:     dependencies(packageJSON)
+      ,required: true
     })
   },
   args => {
-    let o = spawn('npm', [ 'i', 'ramda' ])
-    o.stderr.on('data', data => console.log(`stderr: ${data}`))
-    o.stdout.on('data', data => console.log(`stdout: ${data}`))
+
+    if (args.pkg) {
+      let o = spawn('npm', [ 'i', ...args.pkg ])
+      o.stderr.on('data', data => console.log(`stderr: ${data}`))
+      o.stdout.on('data', data => console.log(`stdout: ${data}`))
+    }
   }
 )
 
 program
   .command(
-    'loadrc [configs...]',
+    'loadrc <configs...>',
     'Select the desired conifigurtion template you would like add to project',
     command => {
       command.option('a', {
@@ -48,13 +52,13 @@ program
       command.positional('configs', {
         description:
           'specific config templates out of the available offerings;'
-        ,choices: getTemplateFilePaths('rx/').map(file => file.name)
+        ,choices: getTemplateFilePaths('templates/').map(file => file.name)
       })
     },
     args => {
-      let templatePath = resolve(__dirname, '../template/')
+      let templatePath = resolve(__dirname, '../templates/')
       let selectedConfigs = args.configs
-      let availableTemplates = getTemplateFilePaths('./rx').reduce(
+      let availableTemplates = getTemplateFilePaths('templates').reduce(
         (last, next) => {
           last[next.name] = next
           return last
@@ -64,7 +68,7 @@ program
 
       for (let file in selectedConfigs) {
         let chosenConfig = selectedConfigs[file]
-        copyFile(
+       console.log(
           `${templatePath}/${availableTemplates[chosenConfig].base}`,
           availableTemplates[chosenConfig].base,
           logError

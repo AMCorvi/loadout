@@ -3,7 +3,7 @@
 const {
   spawn, execSync
 } = require('child_process')
-const { readFile } = require('fs')
+const { copyFile,readFile } = require('fs')
 const program = require('yargs')
 const { resolve } = require('path')
 
@@ -39,6 +39,7 @@ program.command(
   }
 )
 
+
 program
   .command(
     'loadrc <configs...>',
@@ -68,7 +69,7 @@ program
 
       for (let file in selectedConfigs) {
         let chosenConfig = selectedConfigs[file]
-       console.log(
+       copyFile(
           `${templatePath}/${availableTemplates[chosenConfig].base}`,
           availableTemplates[chosenConfig].base,
           logError

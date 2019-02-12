@@ -1,14 +1,13 @@
 {
   "name": "@amcorvi/loadout",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "A personlized loadout of utility libraries that ease my development process",
   "main": "index.js",
   "engines": {
     "node": ">=6.4.0"
   },
   "bin": {
-    "loadout": "./bin/loadout.js",
-    "create": "./bin/create.js"
+    "loadout": "./bin/loadout.js"
   },
   "scripts": {
     "clean": "node lib/clean_submodules.js",

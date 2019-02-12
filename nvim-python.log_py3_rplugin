@@ -1,0 +1,40 @@
+2018-11-29 06:03:32,870 [ERROR @ base_events.py:default_exception_handler:1591] 70960 - Task exception was never retrieved
+future: <Task finished coro=<BaseEventLoop.subprocess_exec() done, defined at /usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py:1491> exception=RuntimeError('Cannot add child handler, the child watcher does not have a loop attached')>
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1516, in subprocess_exec
+    bufsize, **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 193, in _make_subprocess_transport
+    self._child_watcher_callback, transp)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 924, in add_child_handler
+    "Cannot add child handler, "
+RuntimeError: Cannot add child handler, the child watcher does not have a loop attached
+2018-11-29 06:03:32,885 [ERROR @ base_events.py:default_exception_handler:1591] 70960 - Task exception was never retrieved
+future: <Task finished coro=<BaseEventLoop.subprocess_exec() done, defined at /usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py:1491> exception=RuntimeError('Cannot add child handler, the child watcher does not have a loop attached')>
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1516, in subprocess_exec
+    bufsize, **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 193, in _make_subprocess_transport
+    self._child_watcher_callback, transp)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 924, in add_child_handler
+    "Cannot add child handler, "
+RuntimeError: Cannot add child handler, the child watcher does not have a loop attached
+2018-11-29 06:03:32,885 [ERROR @ base_events.py:default_exception_handler:1591] 70960 - Task exception was never retrieved
+future: <Task finished coro=<BaseEventLoop.subprocess_exec() done, defined at /usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py:1491> exception=RuntimeError('Cannot add child handler, the child watcher does not have a loop attached')>
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1516, in subprocess_exec
+    bufsize, **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 193, in _make_subprocess_transport
+    self._child_watcher_callback, transp)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 924, in add_child_handler
+    "Cannot add child handler, "
+RuntimeError: Cannot add child handler, the child watcher does not have a loop attached
+2018-11-29 06:03:32,886 [ERROR @ base_events.py:default_exception_handler:1591] 70960 - Task exception was never retrieved
+future: <Task finished coro=<BaseEventLoop.subprocess_exec() done, defined at /usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py:1491> exception=RuntimeError('Cannot add child handler, the child watcher does not have a loop attached')>
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/base_events.py", line 1516, in subprocess_exec
+    bufsize, **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 193, in _make_subprocess_transport
+    self._child_watcher_callback, transp)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/asyncio/unix_events.py", line 924, in add_child_handler
+    "Cannot add child handler, "
+RuntimeError: Cannot add child handler, the child watcher does not have a loop attached

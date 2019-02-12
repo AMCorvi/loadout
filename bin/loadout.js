@@ -77,4 +77,21 @@ program
       }
     }
   )
+
+program
+      .command(
+        'genschema <label_name>', // command scheme
+        'Create a file in which to write a JSON Schema that can also be displayed and examined', // Description of command
+        function (command) {
+
+        },
+        function (args) {
+
+          nodemon(
+            { script: resolve(__dirname + '../lib/serve_schema_data.js') },
+          )
+        }
+      )
+
+  // Execute CLI
   .help().argv

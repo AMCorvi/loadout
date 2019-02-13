@@ -81,13 +81,15 @@ program
   .command(
     'previewschema <label_name>', // command scheme
     'Create a file in which to write a JSON Schema that can also be displayed and examined', // Description of command
-    function(command) {},
+    function(command) {
+      command.positional('label_name', { required: true })
+    },
     function(args) {
       nodemon(
         '--ext "js yaml json" ' +
-          ` --watch ${args.label_name}.*.* ` +
-          ` ${resolve(__dirname + '/../lib/serve_schema_data.js')} ` +
-          ` ${args.label_name} `
+          `--watch ${args.label_name}.*.* ` +
+          `${resolve(__dirname + '/../lib/serve_schema_data.js')} ` +
+          `${args.label_name} `
       ).on('restart', function(event) {
         // clear console screen everytime an update to the source file is recognized
         console.clear()

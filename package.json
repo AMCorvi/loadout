@@ -1,6 +1,6 @@
 {
   "name": "@amcorvi/loadout",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A personlized loadout of utility libraries that ease my development process",
   "main": "index.js",
   "engines": {
